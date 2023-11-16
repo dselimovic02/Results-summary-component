@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&family=Playfair:ital,opsz,wght@0,5..1200,500;0,5..1200,600;0,5..1200,700;1,5..1200,400&display=swap');
+/* Reference IMG https://res.cloudinary.com/dz209s6jk/image/upload/v1676651421/Challenges/xals0mqfmph6kcspsezk.jpg */
+
+:root{
+    /*Primary*/
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /*Gradients*/
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /*Neutral*/
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+html{
+    font-size: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk';
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 65.5rem;
+    height: 45.5rem;
+    box-shadow: 7px 7px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 3rem;
+    
+}
+.left,
+.right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.4rem;
+}
+
+/*Left side*/
+.left{
+    text-align: center;
+    background: linear-gradient(
+        var(--Light-slate-blue), 
+        var(--Light-royal-blue));
+    border-radius: 3rem;
+}
+.left h2{
+    font-size: 2.1rem;
+    color: var(--Light-lavender);
+}
+
+/*Circle*/
+.result{
+    margin: 3rem 0 0; 
+    width: 17.7rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    margin-top: 0.7rem;
+    color: var(--White);
+    font-size: 6.4rem;
+    line-height: 1.1;
+}
+.result p{
+    color: hsla(241, 100%, 89%, 0.5);;
+    font-size: 1.6rem;
+}
+
+/*Left side paragraph*/
+.summary{
+    margin-top: 2.3rem;
+}
+.summary h2{
+    font-size: 2.8rem;
+    color: var(--White);
+}
+.summary p{
+    margin-top: 1.5rem;
+    color: var(--Light-lavender);
+    font-size: 1.6rem;
+}
+
+/*Right side*/
+.right{
+    align-items: start !important;
+}
+
+.right h2{
+    font-size: 2.1rem;
+    color: var(--Dark-gray-blue);
+}
+
+.points{
+    margin-top: .5rem;
+    width: 25.67rem;
+}
+.point-label{
+    width: 100%;
+    height: 4.85rem;
+    border-radius: .8rem;
+    margin: 1.7rem 0;
+    background: #aaa;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    position: relative;
+}
+.point-label img{
+    width: 2rem;
+}
+.point-label h3{
+    font-size: 1.6rem;
+    margin-left: 1rem;
+}
+.point-label p{
+    position: absolute;
+    right: 1.2rem;
+    font-size: 1.65rem;
+    font-weight: 900;
+    color: var(--Dark-gray-blue);
+}
+.point-label span{
+    color: hsla(224, 30%, 27%, 0.5);
+}
+
+/*Reaction label*/
+.reaction{
+    background: hsla(0, 100%, 67%, 0.05);
+    color: hsla(0, 100%, 67%, 0.8);
+}
+
+/*Memory label*/
+.memory{
+    background: hsla(39, 100%, 56%, 0.05);
+    color: hsla(39, 100%, 56%, 0.5);
+}
+
+/*Verbal label*/
+.verbal{
+    background: hsla(166, 100%, 37%, 0.05);
+    color: hsla(166, 100%, 37%, 0.5);
+}
+
+/*Visual label*/
+.visual{
+    background: hsla(234, 85%, 45%, 0.05);
+    color: hsla(234, 85%, 45%, 0.5);
+}
+
+/*Button*/
+.button{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    height: 5.2rem;
+    border-radius: 3rem;
+    background: var(--Dark-gray-blue);
+    color: var(--White);
+    font-size: 1.6rem;
+    margin-top: 1.72rem;
+    cursor: pointer;
+}
+.button:hover,
+.button:active{
+    background: linear-gradient(
+        var(--Light-slate-blue), 
+        var(--Light-royal-blue));
+}
+.button:active{
+    transform: scale(0.95);
+}
+
+/*MOBILE PHONE*/
+@media screen and (max-width: 375px){
+    
+    .card{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    .left,
+    .right{
+        width: 100%;
+        height: 50%;
+    }
+    .left{
+        border-radius: 0 0 3rem 3rem;
+    }
+    .points{
+        width: 30.7rem;
+    }
+}
